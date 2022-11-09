@@ -50,7 +50,7 @@ def pregunta_03():
     Name: _c1, dtype: int64
 
     """
-    return
+    return tbl0["_c1"].value_counts().sort_index(ascending=True)
 
 
 def pregunta_04():
