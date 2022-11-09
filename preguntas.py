@@ -22,7 +22,7 @@ def pregunta_01():
     40
 
     """
-    return len(tbl0)
+    return (tbl0.shape[0])
 
 
 def pregunta_02():
