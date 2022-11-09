@@ -33,7 +33,7 @@ def pregunta_02():
     4
 
     """
-    return 
+    return (tbl0.shape[1])
 
 
 def pregunta_03():
