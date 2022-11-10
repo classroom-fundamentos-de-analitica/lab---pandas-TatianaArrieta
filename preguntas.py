@@ -67,7 +67,7 @@ def pregunta_04():
     """
     ta=tbl0[["_c1","_c2"]]
     te=ta.set_index("_c1")
-    return ta.groupby(level=0).mean()
+    return te.groupby(level=0).mean()
 
 
 def pregunta_05():
