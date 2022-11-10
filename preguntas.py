@@ -116,7 +116,10 @@ def pregunta_07():
     E    67
     Name: _c2, dtype: int64
     """
-    return
+    ta=tbl0[["_c1","_c2"]]
+    te=ta.set_index("_c1")
+    tte=te.groupby(level=0).sum()
+    return tte["_c2"]
 
 
 def pregunta_08():
