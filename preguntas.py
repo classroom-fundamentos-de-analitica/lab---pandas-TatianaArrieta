@@ -194,9 +194,10 @@ def pregunta_11():
     """
     c0=tbl1["_c0"]
     c0.tolist()
-    c1=tbl1.groupby(["_c0"])["_c4"].apply(','.join)
-    c1.tolist()
-    nuevo = pd.DataFrame(list(zip(c0,c1)), columns = ['_c0','_c4'])
+    c44=tbl1.sort_values('_c4')
+    c4=c44.groupby(["_c0"])["_c4"].apply(','.join)
+    c4.tolist()
+    nuevo = pd.DataFrame(list(zip(c0,c4)), columns = ['_c0','_c4'])
     return nuevo
 
 
