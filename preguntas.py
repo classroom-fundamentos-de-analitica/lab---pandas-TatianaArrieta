@@ -174,7 +174,7 @@ def pregunta_10():
     c1=c11.groupby(['_c1'])['_c2'].apply(lambda x: ':'.join(str(e) for e in x))
     c1.tolist()
     nuevo = pd.DataFrame(list(zip(c0,c1)), columns = ['_c0','_c1'])
-    return nuevo
+    return nuevo.set_index("_c0")
 
 def pregunta_11():
     """
