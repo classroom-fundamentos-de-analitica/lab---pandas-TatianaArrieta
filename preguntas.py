@@ -95,8 +95,8 @@ def pregunta_06():
     ['A', 'B', 'C', 'D', 'E', 'F', 'G']
 
     """
-    t=tbl1["_c4"].str.upper().sort_values(ascending=True)
-    return t.unique()
+    t=tbl1["_c4"].str.upper().sort_values(ascending=True).unique()
+    return t.tolist()
 
 
 def pregunta_07():
