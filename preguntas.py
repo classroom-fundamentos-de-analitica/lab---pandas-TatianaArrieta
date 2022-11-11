@@ -65,10 +65,8 @@ def pregunta_04():
     E    4.785714
     Name: _c2, dtype: float64
     """
-    ta=tbl0[["_c1","_c2"]]
-    te=ta.set_index("_c1")
-    tte=te.groupby(level=0).mean()
-    return tte["_c2"]
+  
+    return tbl0.groupby("_c1")["_c2"].mean()
 
 
 def pregunta_05():
@@ -85,10 +83,7 @@ def pregunta_05():
     E    9
     Name: _c2, dtype: int64
     """
-    ta=tbl0[["_c1","_c2"]]
-    te=ta.set_index("_c1")
-    tte=te.groupby(level=0).max()
-    return tte["_c2"]
+    return tbl0.groupby("_c1")["_c2"].max()
 
 
 def pregunta_06():
@@ -100,7 +95,8 @@ def pregunta_06():
     ['A', 'B', 'C', 'D', 'E', 'F', 'G']
 
     """
-    return
+    t=tbl1["_c4"].str.upper().sort_values(ascending=True)
+    return t.unique()
 
 
 def pregunta_07():
@@ -116,10 +112,7 @@ def pregunta_07():
     E    67
     Name: _c2, dtype: int64
     """
-    ta=tbl0[["_c1","_c2"]]
-    te=ta.set_index("_c1")
-    tte=te.groupby(level=0).sum()
-    return tte["_c2"]
+    return tbl0.groupby("_c1")["_c2"].sum()
 
 
 def pregunta_08():
