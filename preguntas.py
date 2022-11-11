@@ -216,7 +216,14 @@ def pregunta_12():
     38   38                    eee:0,fff:9,iii:2
     39   39                    ggg:3,hhh:8,jjj:5
     """
-    return
+    tbl2['_c5'] = tbl2[['_c5a', '_c5b']].apply(lambda x: ':'.join(str(e) for e in x), axis=1)
+    c0=tbl2["_c0"]
+    c0.tolist()
+    c55=tbl2.sort_values('_c5')
+    c5=c55.groupby(["_c0"])["_c5"].apply(','.join)
+    c5.tolist()
+    nuevo = pd.DataFrame(list(zip(c0,c5)), columns = ['_c0','_c5'])
+    return nuevo
 
 
 def pregunta_13():
