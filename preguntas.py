@@ -132,7 +132,7 @@ def pregunta_08():
     """
     suma=tbl0[["_c0","_c2"]].sum(axis=1)
     tabla = pd.concat([tbl0,suma,],axis=1)
-    return tabla
+    return tabla.rename(columns={"0": "suma",},)
 
 
 def pregunta_09():
