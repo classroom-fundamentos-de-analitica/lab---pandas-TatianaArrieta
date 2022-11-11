@@ -240,4 +240,9 @@ def pregunta_13():
     E    275
     Name: _c5b, dtype: int64
     """
-    return
+    c0=tbl0["_c1"]
+    c0.tolist()
+    suma=tbl2.groupby("_c0")["_c5b"].sum()
+    suma.tolist()
+    nuevo = pd.DataFrame(list(zip(c0,suma)), columns = ['_c1','_c5b'])
+    return nuevo.groupby("_c1")["_c5b"].sum()
