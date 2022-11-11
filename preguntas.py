@@ -168,9 +168,13 @@ def pregunta_10():
     3   D                  1:2:3:5:5:7
     4   E  1:1:2:3:3:4:5:5:5:6:7:8:8:9
     """
-    tbb=tbl0.sort_values('_c2')
-    return tbb.groupby(['_c1'])['_c2'].apply(lambda x: ':'.join(str(e) for e in x))
-
+    c0=tbl0["_c1"].sort_values(ascending=True).unique()
+    c0.tolist()
+    c11=tbl0.sort_values('_c2')
+    c1=c11.groupby(['_c1'])['_c2'].apply(lambda x: ':'.join(str(e) for e in x))
+    c1.tolist()
+    nuevo = pd.DataFrame(list(zip(c0,c1)), columns = ['_c0','_c1'])
+    return nuevo
 
 def pregunta_11():
     """
