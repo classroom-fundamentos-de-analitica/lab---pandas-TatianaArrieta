@@ -150,7 +150,8 @@ def pregunta_09():
     39   39   E    5  1998-01-26  1998
 
     """
-    return
+    tbl0[['year','month','day']]=tbl0._c3.str.split('-',expand=True)
+    return tbl0.drop(['month','day'], axis=1)
 
 
 def pregunta_10():
