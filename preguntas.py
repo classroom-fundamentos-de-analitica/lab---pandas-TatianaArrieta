@@ -130,9 +130,9 @@ def pregunta_08():
     39   39   E    5  1998-01-26    44
 
     """
-    suma=tbl0[["_c0","_c2"]].sum(axis=1)
-    tabla = pd.concat([tbl0,suma,],axis=1)
-    return tabla.rename(columns={"0": "suma",},)
+    suma=tbl0[["_c0","_c2"]].sum(axis=1).tolist()
+    tbl0["suma"]= suma
+    return tbl0
 
 
 def pregunta_09():
