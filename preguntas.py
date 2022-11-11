@@ -168,7 +168,8 @@ def pregunta_10():
     3   D                  1:2:3:5:5:7
     4   E  1:1:2:3:3:4:5:5:5:6:7:8:8:9
     """
-    return
+    tbb=tbl0.sort_values('_c2')
+    return tbb.groupby(['_c1'])['_c2'].apply(lambda x: ':'.join(str(e) for e in x))
 
 
 def pregunta_11():
