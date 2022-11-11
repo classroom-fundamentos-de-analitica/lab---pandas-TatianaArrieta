@@ -192,7 +192,12 @@ def pregunta_11():
     38   38      d,e
     39   39    a,d,f
     """
-    return
+    c0=tbl1["_c0"]
+    c0.tolist()
+    c1=tbl1.groupby(["_c0"])["_c4"].apply(','.join)
+    c1.tolist()
+    nuevo = pd.DataFrame(list(zip(c0,c1)), columns = ['_c0','_c4'])
+    return nuevo
 
 
 def pregunta_12():
